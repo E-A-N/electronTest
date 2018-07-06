@@ -10,12 +10,12 @@ function createWindow () {
     win = new BrowserWindow({
         width: 800,
         height: 600,
-        transparent: true,
-        frame: false
+        transparent: true
     })
 
     // and load the index.html of the app.
-    win.loadFile('index.html')
+    win.loadFile('index.html');
+
 
     // Open the DevTools.
     //win.webContents.openDevTools()
@@ -32,7 +32,9 @@ function createWindow () {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+app.on('ready', () => {
+    setTimeout(createWindow, 100);
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
