@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <title>Hello World!</title>
+        <script src="addButton.js"></script>
     </head>
     <body>
         <h1> Hello World! </h1>
@@ -14,14 +15,6 @@
             <span> count is: </span>
             <span id="countText">0</span>
         <div>
-        <script>
-            const adder = (amount = 1) => {
-                var cnt = document.getElementById("countText");
-                cnt.innerHTML = JSON.parse(cnt.innerHTML) + amount;
-                console.log(cnt.innerHTML);
-            }
-
-        </script>
         <button onclick="adder()"> Add 1 to ctn <button>
     </body>
 </html>
