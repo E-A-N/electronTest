@@ -10,5 +10,18 @@
         <!-- We are using node <script>document.write(process.versions.node)</script>,
         Chrome <script>document.write(process.versions.chrome)</script>,
         and Electron <script>document.write(process.versions.electron)</script>. -->
+        <div>
+            <span> count is: </span>
+            <span id="countText">0</span>
+        <div>
+        <script>
+            const adder = (amount = 1) => {
+                var cnt = document.getElementById("countText");
+                cnt.innerHTML = JSON.parse(cnt.innerHTML) + amount;
+                console.log(cnt.innerHTML);
+            }
+
+        </script>
+        <button onclick="adder()"> Add 1 to ctn <button>
     </body>
 </html>
