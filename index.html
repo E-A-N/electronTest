@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <title>Hello World!</title>
-        <script src="addButton.js"></script>
+        <script src="client/js/addButton.js"></script>
     </head>
-    <body>
+    <body onload= "adder()">
         <h1> Hello World! </h1>
         <!-- We are using node <script>document.write(process.versions.node)</script>,
         Chrome <script>document.write(process.versions.chrome)</script>,
@@ -15,6 +15,9 @@
             <span> count is: </span>
             <span id="countText">0</span>
         <div>
+        <form type="submit">
+            <input id="nameField"></input>
+        </form>
         <button onclick="adder()"> Add 1 to ctn <button>
     </body>
 </html>
