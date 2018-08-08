@@ -1,4 +1,4 @@
-const adder = (amount = 1) => {
+module.exports = (amount = 1) => {
 
     const action = amount >= 0 ? "added" : "subtracted";
     const cnt = document.getElementById("countText");
