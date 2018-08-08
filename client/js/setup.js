@@ -1,8 +1,8 @@
 const liveTyper = require("./client/js/liveType");
 const adder =     require("./client/js/addButton");
-const addButton = document.getElementById("addBtn");
-const subtractBtn = document.getElementById("subtractBtn");
-const start = () => {
+const addButton = this.document.getElementById("addBtn");
+const subtractBtn = this.document.getElementById("subtractBtn");
+const start = function() {
     liveTyper();
     addButton.onclick = () => {
         adder();
@@ -11,3 +11,4 @@ const start = () => {
         adder(-1);
     }
 }
+console.log(this);
