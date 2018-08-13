@@ -1,6 +1,8 @@
-module.exports = (elm) => {
+module.exports = (type, target, amount) => {
     const addBtn = document.create("button");
+    addBtn.innerHTML = type;
     return (amount) => {
-        var content = JSON.parse(elm.innerHTML) + amount;
+        var content = JSON.parse(target.innerHTML) + amount;
+        addBtn.
     }
 }

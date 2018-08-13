@@ -7,10 +7,8 @@ module.exports = () => {
         switch(type){
             case "counter":
                 label.innerHTML = "Counter: ";
-                const addBtn = require("counterBtn")()
+                const addBtn = require("counterBtn")("+")
                 addBtn.innerHTML = "+";
-
-
             break;
         }
 
