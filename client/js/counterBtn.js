@@ -1,8 +1,9 @@
 module.exports = (type, target, amount) => {
     const addBtn = document.create("button");
     addBtn.innerHTML = type;
-    return (amount) => {
+    addBtn.onClick = () => {
         var content = JSON.parse(target.innerHTML) + amount;
-        addBtn.
+        target.innerHTML = amount;
     }
+    return addBtn;
 }
