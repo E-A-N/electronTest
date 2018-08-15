@@ -13,7 +13,8 @@ module.exports = () => {
     const subtractBtn = document.getElementById("subtractBtn");
     addButton.onclick = () => {
         domAdder(1);
-        var n = require("./nodeAdd")()("counter");
+        let config = {type: 'counter', amount: 1};
+        var n = require("./nodeAdd")()(config);
         console.log(n);
     }
     subtractBtn.onclick = () => {

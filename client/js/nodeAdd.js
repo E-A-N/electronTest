@@ -1,16 +1,16 @@
 module.exports = () => {
 
-    return function(type, id){
+    return function(config){
         console.log("Doc is:", document.body);
         const node = document.createElement("div");
         const label = document.createElement("span");
 
-        switch(type){
+        switch(config.type){
             case "counter":
                 label.innerHTML = "Counter: ";
                 const counterDiv = document.createElement("span");
-                const addBtn      = require("./counterBtn")("+", counterDiv,  1);
-                const subtractBtn = require("./counterBtn")("-", counterDiv, -1);
+                const addBtn      = require("./counterBtn")("+", counterDiv,  config.amount);
+                const subtractBtn = require("./counterBtn")("-", counterDiv, -config.amount);
                 counterDiv.innerHTML = 0;
                 label.appendChild(counterDiv);
                 label.appendChild(addBtn);
