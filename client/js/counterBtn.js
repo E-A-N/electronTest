@@ -3,6 +3,7 @@ module.exports = (type, target, amount) => {
     addBtn.innerHTML = type;
     addBtn.onClick = () => {
         var content = JSON.parse(target.innerHTML) + amount;
+        console.log("I am clicked!!",content);
         target.innerHTML = amount;
     }
     return addBtn;
