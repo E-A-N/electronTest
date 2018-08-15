@@ -9,14 +9,18 @@ module.exports = () => {
             case "counter":
                 label.innerHTML = "Counter: ";
                 const counterDiv = document.createElement("div");
-                const addBtn      = require("counterBtn")("+", counterDiv,  1);
-                const subtractBtn = require("counterBtn")("-", counterDiv, -1);
-
+                const addBtn      = require("./counterBtn")("+", counterDiv,  1);
+                const subtractBtn = require("./counterBtn")("-", counterDiv, -1);
                 counterDiv.innerHTML = 0;
+                label.appendChild(counterDiv);
+                label.appendChild(addBtn);
+                label.appendChild(subtractBtn);
+                node.appendChild(label)
             break;
         }
 
 
-        document.body.append(node);
+        document.body.appendChild(node);
+        return node;
     }
 }
