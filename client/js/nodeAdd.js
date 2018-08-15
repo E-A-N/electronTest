@@ -11,7 +11,6 @@ module.exports = () => {
                 const counterDiv = document.createElement("span");
                 const addBtn      = require("./counterBtn")("+", counterDiv,  1);
                 const subtractBtn = require("./counterBtn")("-", counterDiv, -1);
-                //addBtn.onclick
                 counterDiv.innerHTML = 0;
                 label.appendChild(counterDiv);
                 label.appendChild(addBtn);
