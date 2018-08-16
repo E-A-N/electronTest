@@ -19,6 +19,11 @@ module.exports = () => {
     }
     subtractBtn.onclick = () => {
         domAdder(-1);
+        var child = document.body.lastElementChild;
+        if(child.getAttribute("class") === "counterBtn"){
+            console.log(child);
+            document.body.removeChild(child);
+        }
     }
 
 

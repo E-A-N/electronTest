@@ -15,7 +15,8 @@ module.exports = () => {
                 label.appendChild(counterDiv);
                 label.appendChild(addBtn);
                 label.appendChild(subtractBtn);
-                node.appendChild(label)
+                node.appendChild(label);
+                node.setAttribute("class", "counterBtn");
             break;
         }
 
