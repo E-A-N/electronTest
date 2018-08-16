@@ -1,4 +1,5 @@
 module.exports = () => {
+    const nodeBuilder = require("./nodeAdd")();
     const domAdder = (amt = 0) => {
         const action = amt >= 0 ? "added" : "subtracted";
         const cnt = document.getElementById("countText");
@@ -14,7 +15,7 @@ module.exports = () => {
     addButton.onclick = () => {
         domAdder(1);
         let config = {type: 'counter', amount: 1};
-        var n = require("./nodeAdd")()(config);
+        var n = nodeBuilder(config);
         console.log(n);
     }
     subtractBtn.onclick = () => {
@@ -25,6 +26,4 @@ module.exports = () => {
             document.body.removeChild(child);
         }
     }
-
-
 }
