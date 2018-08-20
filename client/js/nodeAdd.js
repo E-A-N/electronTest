@@ -9,8 +9,8 @@ module.exports = () => {
             case "counter":
                 label.innerHTML = "Counter: ";
                 const counterDiv = document.createElement("span");
-                const addBtn      = require("./counterBtn")("+", counterDiv,  config.amount);
-                const subtractBtn = require("./counterBtn")("-", counterDiv, -config.amount);
+                const addBtn      = require("./elements/counterBtn")("+", counterDiv,  config.amount);
+                const subtractBtn = require("./elements/counterBtn")("-", counterDiv, -config.amount);
                 counterDiv.innerHTML = 0;
                 label.appendChild(counterDiv);
                 label.appendChild(addBtn);
