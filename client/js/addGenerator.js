@@ -1,18 +1,21 @@
 module.exports = (type, id) = {
     let node;
     switch(type){
-        case "addBtn":
+        case "incrementer":
             node = document.createElement("button");
-            node.setAttribute("class", "addBtn");
-            node.innerHTML = "Add 1 to Count";
+            //node.setAttribute("class", "addBtn");
+            node.innerHTML = "Add incrementer node";
         break;
 
-        case "subtractBtn":
+        case "deleter":
             node = document.createElement("button");
-            node.setAttribute("class", "subtractBtn");
-            node.innerHTML = "Take 1 from count";
+            //node.setAttribute("class", "subtractBtn");
+            node.innerHTML = "Delete Node";
         break;
     }
 
+    if(id) {
+        node.setAttribute("id", id);
+    }
     return node;
 }
