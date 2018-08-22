@@ -4,14 +4,17 @@ module.exports = (name, type, props) => {
 
     const x      = props.x ? props.x : 0;
     const y      = props.y ? props.y : 0;
-    const width  = props.width  ? props.width  : 100;
-    const height = props.height ? props.height : 100;
-    const color  = props.color  ? props.color  : "green";
+    const width  = props.width   ? props.width   : 100;
+    const height = props.height  ? props.height  : 100;
+    const color  = props.color   ? props.color   : "green";
+    const outline = props.outline ? props.outline : "black";
 
     canvas.width  = width;
     canvas.hegiht = height;
-    
+
     ctx.fillStyle = color;
-    ctx.fillRect(x, y, width, height)
+    ctx.fillRect(x, y, width, height);
+    ctx.fillStyle = outline;
+    ctx.strokeRect(x,y,width, height);
     return canvas;
 }
