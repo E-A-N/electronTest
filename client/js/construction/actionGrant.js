@@ -1,9 +1,20 @@
 module.exports = () => {
 
-    return (type) => {
+    return (node) => {
 
-        switch(type){
-            case;
+        switch(node.type){
+            case "counterBtnAdd":
+                node.onclick = () => {
+                    domAdder(msgNode, noteNode, 1);
+                    let config = {type: 'counter', amount: 1};
+                    var n = nodeBuilder(config);
+                    console.log(n);
+                }
+            break;
+
+            case "deleteBtn":
+
+            break;
         }
     }
 }
