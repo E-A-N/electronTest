@@ -3,11 +3,14 @@ const liveTyper = require("./client/js/liveType");
 const adder     = require("./client/js/addButton");
 const nodePlus  = require("./client/js/nodeAdd");
 const generate  = require("./client/js/addGenerator");
-const elmRegion = document.getElementById("createRegion");
+
 console.log(path);
 const start = function() {
-    const addButton = generate("incrementer");
-    const deleteButton = generate("deleter")
+    const elmRegion = document.getElementById("createRegion");
+    const addButton = generate("incrementer","counterAdd");
+    const deleteButton = generate("deleter", "nodeDelete");
+    elmRegion.appendChild(addButton);
+    elmRegion.appendChild(deleteButton);
     liveTyper();
     adder();
     nodePlus();

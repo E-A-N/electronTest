@@ -5,8 +5,8 @@ module.exports = () => {
     const noteNode = document.getElementById("msg");
 
 
-    const addButton = document.getElementById("addBtn");
-    const subtractBtn = document.getElementById("subtractBtn");
+    const addButton = document.getElementById("counterAdd");
+    const subtractBtn = document.getElementById("nodeDelete");
     addButton.onclick = () => {
         domAdder(msgNode, noteNode, 1);
         let config = {type: 'counter', amount: 1};

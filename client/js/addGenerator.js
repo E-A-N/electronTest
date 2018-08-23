@@ -1,16 +1,16 @@
-module.exports = (type, id) = {
+module.exports = (type, id) => {
     let node;
     switch(type){
         case "incrementer":
             node = document.createElement("button");
             //node.setAttribute("class", "addBtn");
-            node.innerHTML = "Add incrementer node";
+            node.innerHTML = "Add +/- node";
         break;
 
         case "deleter":
             node = document.createElement("button");
             //node.setAttribute("class", "subtractBtn");
-            node.innerHTML = "Delete Node";
+            node.innerHTML = "Delete Last Node";
         break;
     }
 
