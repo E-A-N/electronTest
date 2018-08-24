@@ -13,5 +13,5 @@ const start = function() {
     elmRegion.appendChild(deleteButton);
     liveTyper();
     adder();
-    nodePlus();
+    //nodePlus();
 }

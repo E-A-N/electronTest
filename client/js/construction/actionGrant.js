@@ -12,8 +12,14 @@ module.exports = () => {
                 }
             break;
 
-            case "deleteBtn":
-
+            case "btnDelete":
+                node.onclick = () => {
+                    var child = document.body.lastElementChild;
+                    if(child.getAttribute("class") === "counterBtn"){
+                        console.log(child);
+                        document.body.removeChild(child);
+                    }
+                }
             break;
         }
     }
