@@ -1,4 +1,4 @@
-module.exports = (node, postNode, amount = 0) => {
+module.exports = (node, amount = 0) => {
     const action = amount >= 0 ? "added" : "subtracted";
     node.innerHTML = JSON.parse(node.innerHTML) + amount;
     console.log(node.innerHTML);

@@ -4,8 +4,10 @@ module.exports = () => {
             switch(type){
                 case "counterBtnAdd":
                     const nodeBuilder = require("../nodeAdd");
+                    const nodeAction = require("../actions/parseAdd");
+                    const msgNode    = document.getElementById("msg");
                     node.onclick = () => {
-                        //domAdder(msgNode, noteNode, 1);
+                        nodeAction(msgNode, 1);
                         let config = {type: 'counter', amount: 1};
                         var n = nodeBuilder(config);
                         console.log(n);
