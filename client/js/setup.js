@@ -6,11 +6,11 @@ const generate  = require("./client/js/construction/createNodeGenerator");
 
 console.log(path);
 const start = function() {
-    const elmRegion = document.getElementById("createRegion");
+    const genRegion = document.getElementById("generatorRegion");
     const addButton = generate("incrementer","counterAdd");
     const deleteButton = generate("deleter", "nodeDelete");
-    elmRegion.appendChild(addButton);
-    elmRegion.appendChild(deleteButton);
+    genRegion.appendChild(addButton);
+    genRegion.appendChild(deleteButton);
     liveTyper();
     adder();
     //nodePlus();
