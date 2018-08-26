@@ -1,7 +1,8 @@
 module.exports = (type, id) => {
     const elmRegion = document.getElementById("createRegion");
+    const nodeBuilder = require("../nodeAdd")();
     let node;
-    let config;    
+    let config = {};
     switch(type){
         case "incrementer":
             config.type = "counter";
@@ -9,6 +10,9 @@ module.exports = (type, id) => {
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
+            node.onlick = () => {
+                var n = nodeBuilder("config");
+            }
         break;
 
         case "deleter":
