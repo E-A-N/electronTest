@@ -16,12 +16,12 @@ module.exports = () => {
     //     console.log(n);
     // }
 
-    subtractBtn.onclick = () => {
-        parseAdd(msgNode,noteNode, -1);
-        var child = document.body.lastElementChild;
-        if(child.getAttribute("class") === "counterBtn"){
-            console.log(child);
-            document.body.removeChild(child);
-        }
-    }
+    // subtractBtn.onclick = () => {
+    //     parseAdd(msgNode,noteNode, -1);
+    //     var child = document.body.lastElementChild;
+    //     if(child.getAttribute("class") === "counterBtn"){
+    //         console.log(child);
+    //         document.body.removeChild(child);
+    //     }
+    // }
 }
