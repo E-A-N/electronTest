@@ -1,4 +1,4 @@
-module.exports = () => {
+module.exports = (region = document.body) => {
 
     return function(config){
         console.log("Doc is:", document.body);
@@ -20,8 +20,8 @@ module.exports = () => {
             break;
         }
 
-
-        document.body.appendChild(node);
+        console.log("Region is:", region);
+        region.appendChild(node);
         return node;
     }
 }

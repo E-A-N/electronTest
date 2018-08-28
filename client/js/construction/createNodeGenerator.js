@@ -1,6 +1,6 @@
 module.exports = (type, id) => {
     const elmRegion = document.getElementById("createRegion");
-    const nodeBuilder = require("../nodeAdd")();
+    const nodeBuilder = require("../nodeAdd")(elmRegion);
     let node;
     let config = {};
     switch(type){
@@ -10,8 +10,9 @@ module.exports = (type, id) => {
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
-            node.onlick = () => {
-                var n = nodeBuilder("config");
+            node.onclick = () => {
+                console.log("Build!!");
+                var n = nodeBuilder(config);
             }
         break;
 
