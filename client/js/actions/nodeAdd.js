@@ -5,12 +5,12 @@ module.exports = (region = document.body) => {
         const node = document.createElement("div");
         const label = document.createElement("span");
 
-        switch(config.type){
-            case "counter":
+        switch(config.action){
+            case "count":
                 label.innerHTML = "Counter: ";
                 const counterDiv = document.createElement("span");
-                const addBtn      = require("./elements/counterBtn")("+", counterDiv,  config.amount);
-                const subtractBtn = require("./elements/counterBtn")("-", counterDiv, -config.amount);
+                const addBtn      = require("../elements/counterBtn")("+", counterDiv,  config.amount);
+                const subtractBtn = require("../elements/counterBtn")("-", counterDiv, -config.amount);
                 counterDiv.innerHTML = 0;
                 label.appendChild(counterDiv);
                 label.appendChild(addBtn);

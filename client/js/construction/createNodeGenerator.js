@@ -1,11 +1,11 @@
 module.exports = (type, id) => {
     const elmRegion = document.getElementById("createRegion");
-    const nodeBuilder = require("../nodeAdd")(elmRegion);
+    const nodeBuilder = require("../actions/nodeAdd")(elmRegion);
     let node;
     let config = {};
     switch(type){
         case "incrementer":
-            config.type = "counter";
+            config.type = "count";
             config.amount = 1;
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
@@ -20,6 +20,7 @@ module.exports = (type, id) => {
             node = document.createElement("button");
             node.setAttribute("class", "nodeDeleter");
             node.innerHTML = "Delete Last Node";
+            node = require("../actions/nodeRemove")(node);
         break;
     }
 

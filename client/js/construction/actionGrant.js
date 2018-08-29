@@ -1,13 +1,13 @@
 module.exports = () => {
-        (node, type) => {
+        (node, config) => {
 
-            switch(type){
+            switch(config.type){
                 case "counterBtnAdd":
                     const nodeBuilder = require("../nodeAdd");
                     const nodeAction = require("../actions/parseAdd");
                     const msgNode    = document.getElementById("msg");
                     node.onclick = () => {
-                        nodeAction(msgNode, 1);
+                        nodeAction(msgNode, config.amount);
                         let config = {type: 'counter', amount: 1};
                         var n = nodeBuilder(config);
                         console.log(n);

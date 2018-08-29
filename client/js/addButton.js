@@ -1,5 +1,5 @@
 module.exports = () => {
-    const nodeBuilder = require("./nodeAdd")();
+    //const nodeBuilder = require("./nodeAdd")();
     const parseAdd      = require("./actions/parseAdd");
     const actionGranter = require("./construction/actionGrant");
     const msgNode = document.getElementById("countText");
