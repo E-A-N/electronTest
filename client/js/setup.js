@@ -12,5 +12,4 @@ const start = function() {
     genRegion.appendChild(deleteButton);
     liveTyper();
     adder();
-}
-6
+};

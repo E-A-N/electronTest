@@ -5,18 +5,22 @@ module.exports = (type, id) => {
     let config = {};
     switch(type){
         case "incrementer":
-            config.type = "count";
+            config.action = "count";
             config.amount = 1;
+            config.type   = "counterBtnAdd";
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
-            node.onclick = () => {
-                console.log("Build!!");
-                var n = nodeBuilder(config);
-            }
+            node = require("../construction/actionGrant")(node, config);
+            // node.onclick = () => {
+            //     console.log("Build!!");
+            //     var n = nodeBuilder(config);
+            // }
         break;
 
         case "deleter":
+            config.type = "btnDelete";
+            config.target = document.body.lastElementChild;
             node = document.createElement("button");
             node.setAttribute("class", "nodeDeleter");
             node.innerHTML = "Delete Last Node";
