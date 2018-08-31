@@ -6,6 +6,7 @@ module.exports = () => {
     const noteNode = document.getElementById("msg");
 
     const addId = document.getElementById("counterAdd");
+    const addConfig = {type: "counterBtnAdd", amount: 0}
     const addButton = actionGranter(addId, "counterBtnAdd");
     const subtractId = document.getElementById("nodeDelete");
     const subtractBtn = document.getElementById("nodeDelete");

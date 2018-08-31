@@ -11,5 +11,5 @@ const start = function() {
     genRegion.appendChild(addButton);
     genRegion.appendChild(deleteButton);
     liveTyper();
-    adder();
+    //adder();
 };

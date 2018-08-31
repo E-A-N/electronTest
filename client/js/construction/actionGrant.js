@@ -6,10 +6,11 @@ module.exports = (node, config) => {
             const nodeBuilder = require("../actions/nodeAdd");
             const nodeAction = require("../actions/parseAdd");
             const msgNode    = document.getElementById("msg");
+            //node._settings = config;
             node.onclick = () => {
                 nodeAction(msgNode, config.amount);
-                let config = {type: 'counter', amount: 1};
-                var n = nodeBuilder(config);
+                let config2 = {type: 'counter', amount: 1};
+                var n = nodeBuilder(config2);
                 console.log(n);
             }
         break;
