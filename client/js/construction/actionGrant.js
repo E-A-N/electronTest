@@ -5,13 +5,13 @@ module.exports = (node, config) => {
         case "counterBtnAdd":
             const nodeBuilder = require("../actions/nodeAdd");
             const nodeAction = require("../actions/parseAdd");
-            const msgNode    = document.getElementById("msg");
+            const msgNode    = document.getElementById(config.msgID);
             //node._settings = config;
             node.onclick = () => {
-                nodeAction(msgNode, config.amount);
-                let config2 = {type: 'counter', amount: 1};
-                var n = nodeBuilder(config2);
-                console.log(n);
+                console.log("Node is", node);
+                let config2 = {type: 'counter', amount: 1, action: "count"};
+                var newNode = nodeBuilder(config2);
+                nodeAction(newNode, msgNode, config.amount);
             }
         break;
 

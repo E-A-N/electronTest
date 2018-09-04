@@ -8,6 +8,7 @@ module.exports = (type, id) => {
             config.action = "count";
             config.amount = 1;
             config.type   = "counterBtnAdd";
+            config.msgID  = "msg";
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
