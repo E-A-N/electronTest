@@ -3,7 +3,7 @@ module.exports = (node, config) => {
     console.log(config);
     switch(config.type){
         case "counterBtnAdd":
-            const nodeBuilder = require("../actions/nodeAdd");
+            const nodeBuilder = require("../actions/nodeAdd")(config);
             const nodeAction = require("../actions/parseAdd");
             const msgNode    = document.getElementById(config.msgID);
             //node._settings = config;

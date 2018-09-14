@@ -6,7 +6,8 @@ const generate  = require("./client/js/construction/createNodeGenerator");
 console.log(path);
 const start = function() {
     const genRegion = document.getElementById("generatorRegion");
-    const addButton = generate("incrementer","counterAdd");
+    const addConfig = {regionId: "createRegion"};
+    const addButton = generate("incrementer","counterAdd")(addConfig);
     const deleteButton = generate("deleter", "nodeDelete");
     genRegion.appendChild(addButton);
     genRegion.appendChild(deleteButton);

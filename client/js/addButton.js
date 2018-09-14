@@ -1,12 +1,13 @@
-module.exports = () => {
+module.exports = (config = {}) => {
     //const nodeBuilder = require("./nodeAdd")();
     //const parseAdd      = require("./actions/parseAdd");
     const actionGranter = require("./construction/actionGrant");
     const msgNode = document.getElementById("countText");
     const noteNode = document.getElementById("msg");
 
-    const addId = document.getElementById("counterAdd");
-    const addConfig = {type: "counterBtnAdd", amount: 0}
+    //const addId = document.getElementById("counterAdd");
+    const addId = document.getElementById(config.regionId);
+    const addConfig = {type: "counterBtnAdd", amount: 0, region: addId}
     const addButton = actionGranter(addId, "counterBtnAdd");
     const subtractId = document.getElementById("nodeDelete");
     const subtractBtn = document.getElementById("nodeDelete");
