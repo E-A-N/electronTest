@@ -1,5 +1,5 @@
 module.exports = (settings) => {
-    const elmRegion = document.getElementById("createRegion");
+    const elmRegion = document.getElementById(settings.regionId);
     const nodeBuilder = require("../actions/nodeAdd")(elmRegion);
     let node;
     let config = {};

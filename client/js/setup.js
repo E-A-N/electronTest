@@ -13,6 +13,7 @@ const start = function() {
     };
     const addButton = generate(addConfig);
     const deleteConfig = {
+        regionId: "createRegion",
         type: "deleter",
         id  : "nodeDelete"
     }
