@@ -6,9 +6,17 @@ const generate  = require("./client/js/construction/createNodeGenerator");
 console.log(path);
 const start = function() {
     const genRegion = document.getElementById("generatorRegion");
-    const addConfig = {regionId: "createRegion"};
-    const addButton = generate("incrementer","counterAdd")(addConfig);
-    const deleteButton = generate("deleter", "nodeDelete");
+    const addConfig = {
+        regionId: "createRegion",
+        type    : "incrementer",
+        id      : "counterAdd"
+    };
+    const addButton = generate(addConfig);
+    const deleteConfig = {
+        type: "deleter",
+        id  : "nodeDelete"
+    }
+    const deleteButton = generate(deleteConfig);
     genRegion.appendChild(addButton);
     genRegion.appendChild(deleteButton);
     liveTyper();

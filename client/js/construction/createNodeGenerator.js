@@ -1,9 +1,9 @@
-module.exports = (type, id) => {
+module.exports = (settings) => {
     const elmRegion = document.getElementById("createRegion");
     const nodeBuilder = require("../actions/nodeAdd")(elmRegion);
     let node;
     let config = {};
-    switch(type){
+    switch(settings.type){
         case "incrementer":
             config.action = "count";
             config.amount = 1;
@@ -29,8 +29,8 @@ module.exports = (type, id) => {
         break;
     }
 
-    if(id) {
-        node.setAttribute("id", id);
+    if(settings.id) {
+        node.setAttribute("id", settings.id);
     }
     return node;
 }
