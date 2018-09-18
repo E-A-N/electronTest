@@ -1,6 +1,6 @@
 module.exports = (settings) => {
     const elmRegion = document.getElementById(settings.regionId);
-    const nodeBuilder = require("../actions/nodeAdd")(elmRegion);
+    //const nodeBuilder = require("../actions/nodeAdd")(elmRegion);
     let node;
     let config = {};
     switch(settings.type){
@@ -9,6 +9,7 @@ module.exports = (settings) => {
             config.amount = 1;
             config.type   = "counterBtnAdd";
             config.msgID  = "msg";
+            config.target = elmRegion;
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
