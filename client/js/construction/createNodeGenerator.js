@@ -1,6 +1,5 @@
 module.exports = (settings) => {
     const elmRegion = document.getElementById(settings.regionId);
-    //const nodeBuilder = require("../actions/nodeAdd")(elmRegion);
     let node;
     let config = {};
     switch(settings.type){
@@ -14,10 +13,6 @@ module.exports = (settings) => {
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
             node = require("../construction/actionGrant")(node, config);
-            // node.onclick = () => {
-            //     console.log("Build!!");
-            //     var n = nodeBuilder(config);
-            // }
         break;
 
         case "deleter":

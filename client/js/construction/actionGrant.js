@@ -6,7 +6,6 @@ module.exports = (node, config) => {
             const nodeBuilder = require("../actions/nodeAdd")(config.target);
             const nodeAction = require("../actions/parseAdd");
             const msgNode    = document.getElementById(config.msgID);
-            //node._settings = config;
             node.onclick = () => {
                 console.log("Node is", node);
                 let config2 = {type: 'counter', amount: 1, action: "count"};
