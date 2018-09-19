@@ -14,8 +14,6 @@ module.exports = (settings) => {
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
-            //node = require("../construction/actionGrant")(node, config)
-            //node = actionGrant(node, config);
         break;
 
         case "deleter":
@@ -25,8 +23,6 @@ module.exports = (settings) => {
             node = document.createElement("button");
             node.setAttribute("class", "nodeDeleter");
             node.innerHTML = "Delete Last Node";
-            //node = require("../actions/nodeRemove")(node);
-            //node = actionGrant(node, config)
         break;
     }
 
