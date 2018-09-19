@@ -1,10 +1,9 @@
 module.exports = (node, config) => {
 
-    console.log(config);
+    const nodeAction = require(config.actionSrc);
     switch(config.type){
         case "counterBtnAdd":
             const nodeBuilder = require("../actions/nodeAdd")(config.target);
-            const nodeAction = require("../actions/parseAdd");
             const msgNode    = document.getElementById(config.msgID);
             node.onclick = () => {
                 console.log("Node is", node);
@@ -14,7 +13,8 @@ module.exports = (node, config) => {
             }
         break;
 
-        case "btnDelete":
+        case "deleteBtnAdd":
+            node = nodeAction(node, config);
             node.onclick = () => {
                 var child = config.target.lastElementChild;
                 if(child.getAttribute("class") === "counterBtn"){

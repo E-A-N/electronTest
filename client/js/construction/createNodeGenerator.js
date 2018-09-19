@@ -1,10 +1,12 @@
 module.exports = (settings) => {
     const elmRegion = document.getElementById(settings.regionId);
+    const actionGrant = require("../construction/actionGrant");
     let node;
     let config = {};
     switch(settings.type){
         case "incrementer":
             config.action = "count";
+            config.actionSrc = "../actions/parseAdd";
             config.amount = 1;
             config.type   = "counterBtnAdd";
             config.msgID  = "msg";
@@ -12,19 +14,23 @@ module.exports = (settings) => {
             node = document.createElement("button");
             node.setAttribute("class", "incrementer");
             node.innerHTML = "Add +/- node";
-            node = require("../construction/actionGrant")(node, config);
+            //node = require("../construction/actionGrant")(node, config)
+            //node = actionGrant(node, config);
         break;
 
         case "deleter":
-            config.type = "btnDelete";
-            config.target = document.body.lastElementChild;
+            config.type = "deleteBtnAdd";
+            config.actionSrc = "../actions/nodeRemove";
+            config.target = document.getElementById("createRegion");
             node = document.createElement("button");
             node.setAttribute("class", "nodeDeleter");
             node.innerHTML = "Delete Last Node";
-            node = require("../actions/nodeRemove")(node);
+            //node = require("../actions/nodeRemove")(node);
+            //node = actionGrant(node, config)
         break;
     }
 
+    node = actionGrant(node, config);
     if(settings.id) {
         node.setAttribute("id", settings.id);
     }

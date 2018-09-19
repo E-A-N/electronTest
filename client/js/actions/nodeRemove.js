@@ -1,9 +1,9 @@
-module.exports = (node) => {
+module.exports = (node, config) => {
     node.onclick = () => {
-        var child = document.body.lastElementChild;
+        var child = config.target.lastElementChild;
         if(child.getAttribute("class") === "counterBtn"){
             console.log(child);
-            document.body.removeChild(child);
+            config.target.removeChild(child);
         }
     }
 
