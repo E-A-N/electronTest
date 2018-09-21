@@ -5,17 +5,10 @@ const generate  = require("./client/js/construction/createNodeGenerator");
 console.log(path);
 const start = function() {
     const genRegion = document.getElementById("generatorRegion");
-    const addConfig = {
-        regionId: "createRegion",
-        type    : "incrementer",
-        id      : "counterAdd"
-    };
+    const addConfig = require("./client/js/config/generatorConfig")("incrGen");
     const addButton = generate(addConfig);
-    const deleteConfig = {
-        regionId: "createRegion",
-        type: "deleter",
-        id  : "nodeDelete"
-    }
+
+    const deleteConfig = require("./client/js/config/generatorConfig")("delGen");
     const deleteButton = generate(deleteConfig);
     genRegion.appendChild(addButton);
     genRegion.appendChild(deleteButton);
