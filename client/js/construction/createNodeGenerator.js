@@ -19,10 +19,16 @@ module.exports = (settings) => {
         case "deleter":
             config.type = "deleteBtnAdd";
             config.actionSrc = "../actions/nodeRemove";
-            config.target = document.getElementById("createRegion");
+            config.target = elmRegion;
             node = document.createElement("button");
             node.setAttribute("class", "nodeDeleter");
             node.innerHTML = "Delete Last Node";
+        break;
+
+        case "lifeBar":
+            config.type = "lifeBarAdd";
+            node = document.createElement("button");
+            node.innerHTML = "Add LIFEBAR";
         break;
     }
 

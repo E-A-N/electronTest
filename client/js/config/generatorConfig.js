@@ -14,6 +14,12 @@ module.exports = (type) => {
             config.id       = "nodeDelete";
         break;
 
+        case "lifeBarGen":
+            config.regionId = "createRegion";
+            config.type     = "lifeBar";
+            config.id       = "lifeBarAdd";
+        break;
+
     }
 
     return config;

@@ -10,7 +10,11 @@ const start = function() {
 
     const deleteConfig = require("./client/js/config/generatorConfig")("delGen");
     const deleteButton = generate(deleteConfig);
+
+    const lifeBarConfig = require("./client/js/config/generatorConfig")("lifeBarGen");
+    const lifeBarButton - generate(lifeBarConfig);
     genRegion.appendChild(addButton);
     genRegion.appendChild(deleteButton);
+    genRegion.appendChild(lifeBarButton):
     liveTyper();
 };
